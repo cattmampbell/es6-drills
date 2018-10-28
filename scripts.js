@@ -22,6 +22,33 @@ $(document).ready(() => {
     // Should log: My name is Olivia and my favorite movie is A Bug's Life.
     favoriteMovie(`Olivia`, `A Bug's Life`);
 
+    // Creates getFirstName function.
+    let getFirstName = (fullName) => {
+        return console.log(`Your first name is, "${fullName.split(' ')[0]}".`);
+    };
+
+    // Should log: Your first name is, "Matthew".
+    getFirstName(`Matthew Campbell`);
+
+    // Creates getLastName function.
+    let getLastName = (fullName) => { return console.log(`Your last name is, "${fullName.split(' ')[1]}".`); };
+
+    // Should log: Your last name is, "Campbell".
+    getLastName(`Matthew Campbell`);
+
+    let doTheMaths = (x, y) => {
+        let exponent = Math.pow(x, y);
+        let product = x * y;
+
+        return { exponent, product };
+    };
+
+    let results = doTheMaths(2, 3);
+    // Should log: The exponent is 8. 
+    console.log(`The exponent is ${results.exponent}.`);
+    // Should log: The product is 6.
+    console.log(`The product is ${results.product}.`);
+
     // Should log: End of scripts.js file!
     console.log(`End of scripts.js file!`);
 });
