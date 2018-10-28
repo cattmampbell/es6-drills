@@ -4,20 +4,20 @@ $(document).ready(() => {
     
     // Should log: Start of script.js file!
     console.log(`Start of script.js file!`);
-    
+
     console.log(`--- --- --- `);
 
     /* Template Literals and Default Parameters Value: */
-    let favoriteMovie = (name = `World`, movie = `The Room`) => { console.log(`My name is ${name} and my favorite movie is ${movie}.`); };
+    let favoriteMovie = (movie = `The Room`, name = `World`) => { console.log(`My name is ${name} and my favorite movie is ${movie}.`); };
 
     // Should log: My name is World and my favorite movie is The Room.
     favoriteMovie();
 
-    // Should log: My name is World and my favorite movie is Die Hard.
+    // Should log: My name is World  and my favorite movie is Die Hard.
     favoriteMovie(`Die Hard`);
 
     // Should log: My name is Matthew and my favorite movie is Die Hard.
-    favoriteMovie(`Matthew`, `Die Hard`);
+    favoriteMovie(`Die Hard`, `Matthew`);
 
     console.log(`--- --- --- `);
 
